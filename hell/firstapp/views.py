@@ -1,13 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<h2>Main</h2>")
+    return HttpResponse("index>")
 def about(request):
-    return HttpResponse("<h2>About</h2>")
+    return HttpResponse("About")
 def contact(request):
-    return HttpResponse("<h2>Contacts</h2>")
+    return HttpResponseRedirect("/about")
+def details(request):
+    return HttpResponsePermanentRedirect('/')
 def products(request, productid=1):
     output = "<h2>Product № {0}</h2>".format(productid)
     return HttpResponse(output)
