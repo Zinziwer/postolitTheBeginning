@@ -1,0 +1,20 @@
+h1{
+    color: yellow;
+}
+h2{
+    color: green;
+}
+h3{
+    color: blue;
+}
+h4{
+    color: red;
+}
+img{
+width: 100%;
+}
+body{
+    width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
