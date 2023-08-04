@@ -11,7 +11,10 @@ def index(request):
     # data = {'header': header, 'langs': langs, 'user': user, 'adress': addr}
     # return render(request, "index.html", context=data)
     # return TemplateResponse(request, "firstapp/home.html")
-    return render(request, 'firstapp/home.html')
+    return render(request, 'firstapp/index.html')
+    # return render(request, "about.html")
+    # return render(request, 'firstapp/home.html')
+
 
 # def about(request):
 #     return HttpResponse("About")
