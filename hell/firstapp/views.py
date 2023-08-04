@@ -4,6 +4,8 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanen
 
 # Create your views here.
 def index(request):
+    cat = ['notebooks', 'printers', 'scanners', 'Hdd-s', 'cables']
+    # data = {'age' : 70}
     # header = 'Personal Information'
     # langs = ['English', 'Germany', 'Spanish']
     # user = {'name': 'Max', 'age': 38}
@@ -11,7 +13,7 @@ def index(request):
     # data = {'header': header, 'langs': langs, 'user': user, 'adress': addr}
     # return render(request, "index.html", context=data)
     # return TemplateResponse(request, "firstapp/home.html")
-    return render(request, 'firstapp/index.html')
+    return render(request, 'firstapp/index.html', context={'cat': cat})
     # return render(request, "about.html")
     # return render(request, 'firstapp/home.html')
 

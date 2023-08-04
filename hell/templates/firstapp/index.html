@@ -1,5 +1,18 @@
 {% extends 'firstapp/base.html' %}
 {% block title %}Index{% endblock title%}
 {% block header %}Main{% endblock header%}
-{% block content %}Connecting index.html and base.html{% endblock content%}
+{% block content %}
+    <p>Product's category</p>
+    {% for i in cat %}
+        <li>{{i}}</li>
+    {% empty %}
+        <li>The list is empty</li>
+    {% endfor %}
+<!--    <p>Client's age analysis</p>-->
+<!--    {% if age > 65 %}-->
+<!--        <p>client is retired</p>-->
+<!--    {% else %}-->
+<!--        <p>client is not retired</p>-->
+<!--    {% endif %}-->
+{% endblock content%}
 

@@ -1,14 +1,25 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hi django!</title>
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-</head>
-<body>
-    <h1>Information about company</h1>
-    <h2>Intellectual program system</h2>
-    <h3>templates/firstapp/about.html</h3>
-</body>
-</html>
+{% extends 'firstapp/base.html' %}
+{% block title %}About{% endblock title%}
+{% block header %}Information about company{% endblock header%}
+{% block content %}
+    <p>Intellectual program systems</p>
+    <p>Date and time parameters</p>
+    <p>Year, 4 digits - {% now 'Y' %}</p>
+    <p>Year, 2 digits - {% now 'y' %}</p>
+    <p>Full month name - {% now 'F' %}</p>
+    <p>Short month name - {% now 'M' %}</p>
+    <p>Month, 2 digits - {% now 'm' %}</p>
+    <p>Month Abbreviation (Associated Press) - {% now 'N' %}</p>
+    <p>Month number 1 digit - {% now 'n' %}</p>
+    <p>Day of the month - {% now 'j' %}</p>
+    <p>Day of the week, text - {% now 'l' %}</p>
+    <p>Hours (0-12) - {% now 'h' %}</p>
+    <p>Hours (0-24) - {% now 'H' %}</p>
+    <p>Minutes (0-59) - {% now 'i' %}</p>
+    <p>Seconds (0-59) - {% now 's' %}</p>
+    <p>Date (day/month/year) - {% now 'j/m/Y' %}</p>
+    <p>Time (hour/minute/second) - {% now 'H/i/s' %}</p>
+
+
+
+{% endblock content%}
