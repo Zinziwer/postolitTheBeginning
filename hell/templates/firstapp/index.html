@@ -8,6 +8,12 @@
     {% empty %}
         <li>The list is empty</li>
     {% endfor %}
+    {% with name='Cafe' number=1 %}
+        <div>
+            <p>{{ name }} works in shop</p>
+            <p>Number № {{ number }}</p>
+        </div>
+    {% endwith %}
 <!--    <p>Client's age analysis</p>-->
 <!--    {% if age > 65 %}-->
 <!--        <p>client is retired</p>-->
